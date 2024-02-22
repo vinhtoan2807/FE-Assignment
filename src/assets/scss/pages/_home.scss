@@ -1,0 +1,54 @@
+.page-home {
+  background-color: map-get($colors, bg-gray-light);
+  .notification {
+    @include pxRem(padding, 80);
+    &-header {
+      @include pxRem(padding, 40 80 0 80);
+    }
+    &-title {
+      @include pxRem(margin-bottom, 20);
+    }
+    &-box {
+      @include pxRem(padding, 20);
+      background-color: map-get($colors, white);
+    }
+    &-list {
+      @include pxRem(border-radius, 10);
+      @include pxRem(margin-top, 10);
+      border: 1px solid #fff;
+    }
+    &-item {
+      @include pxRem(border-radius, 10);
+      // @include pxRem(margin, 10);
+      @include pxRem(height, 100);
+      @include pxRem(gap, 20);
+      @include pxRem(padding, 10);
+      margin: auto;
+      box-sizing: content-box;
+      &.unread {
+        background-color: map-get($colors, bg-gray);
+      }
+    }
+    &-img {
+      @include pxRem(margin-left, 10);
+      flex: 1;
+      img {
+        border-radius: 50%;
+      }
+    }
+    &-content {
+      flex: 10;
+    }
+    &-dot {
+      flex: 1;
+      color: map-get($colors, white);
+      &-unread {
+        flex: 1;
+        color: map-get($colors, btn-primary);
+      }
+    }
+    .btn-pagination {
+      @include pxRem(padding-top, 20);
+    }
+  }
+}
